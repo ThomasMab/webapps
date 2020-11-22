@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Anobo</title>
+        <link rel="stylesheet" href="css/creation.css" type="text/css">
+        <script src="./js/creation.js"></script>
+
+    </head>
+
+    <body>
+      <div>
+        <h1>Création d'une unité d'enregistrement</h1>
+      </div>
+        <div>
+          <form action="/ue" method="post" id="myForm" class="formulaire" onsubmit="validateForm()">
+              <div class="formulaire">
+                <label>Numéro d'identifiant </label>
+                <input type="number" name="id_ue" required>
+              </div>
+
+              <div class="formulaire">
+                <label>Classe </label>
+                <select  name="classe" required >
+                  <option value="" disabled selected hidden>Sélectionnez la classe</option>
+                  <option value="Groupe UE">Groupe UE</option>
+                  <option value="US">US</option>
+                  <option value="Subdivision">Subdivision</option>
+              </select>
+              </div>
+
+              <div class="formulaire">
+                <label>Type </label>
+                  <select  name="type" required >
+                    <option value="" disabled selected hidden>Sélectionnez le type</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                </div>
+
+                <div class="formulaire">
+                  <label>Désignation </label>
+                  <select name="designation" required >
+                    <option value="" disabled selected hidden>Sélectionnez la désignation</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                </div>
+
+                <div class="formulaire">
+                  <label for="description">Description </label>
+                  <textarea type="string" name="description"></textarea>
+                </div>
+
+                <div class="formulaire">
+                  <label for="interpretaiton">Interprétation </label>
+                  <textarea type="string" name="interpretation"></textarea>
+                </div>
+
+                <div class="formulaire">
+                  <label for="secteur">Secteur </label>
+                  <input type="text" name="secteur">
+                </div>
+              <div class="formulaire">
+                <input type="submit" value="Envoyer">
+                <input type="button" value="Retour à l'accueil" onclick="location.replace('/')">
+              </div>
+          </form>            
+        </div>
+    </body>
+</html>
